@@ -1,0 +1,173 @@
+<section class="astro-price-table-container">
+  <style>
+    /* Variáveis Globais de Design */
+    .astro-price-table-container {
+      --bg-dark: #131424;
+      --border-color: #21233d;
+      --accent-gold: #e2b76e;
+      --text-gray: #a0a5c0;
+      --text-light: #ffffff;
+      
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Poppins", Roboto, Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+      padding: 20px 0;
+    }
+
+    .astro-table-wrapper {
+      width: 100%;
+      max-width: 800px;
+      background-color: var(--bg-dark);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Estrutura das Linhas */
+    .astro-table-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 25px;
+      border-bottom: 1px solid var(--border-color);
+      gap: 20px;
+    }
+
+    /* Estilo da Linha de Total (Rodapé) */
+    .astro-table-row.astro-row-total {
+      border-bottom: none;
+      padding: 25px 25px;
+    }
+
+    /* Conteúdo da Esquerda (Textos) */
+    .astro-item-title {
+      color: var(--text-gray);
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .astro-total-title {
+      color: var(--accent-gold);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* Conteúdo da Direita (Preços) */
+    .astro-item-price {
+      color: var(--accent-gold);
+      font-size: 16px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .astro-total-price {
+      color: var(--accent-gold);
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: line-through;
+      opacity: 0.8;
+      white-space: nowrap;
+    }
+
+    /* Responsividade - Mobile (Telas até 600px) */
+    @media (max-width: 600px) {
+      .astro-table-row {
+        padding: 16px 18px;
+        gap: 15px;
+      }
+
+      .astro-table-row.astro-row-total {
+        padding: 22px 18px;
+      }
+
+      .astro-item-title {
+        font-size: 15px; /* Ajuste milimétrico para evitar quebras excessivas no mobile */
+      }
+
+      .astro-item-price {
+        font-size: 15px;
+      }
+
+      .astro-total-title {
+        font-size: 14px;
+      }
+
+      .astro-total-price {
+        font-size: 17px;
+      }
+    }
+  </style>
+
+  <div class="astro-table-wrapper">
+    
+    <div class="astro-table-row">
+      <p class="astro-item-title">Tripé da Personalidade (Sol, Lua e Ascendente)</p>
+      <span class="astro-item-price">R$ 90</span>
+    </div>
+
+    <div class="astro-table-row">
+      <p class="astro-item-title">Análise dos Planetas (Talentos e Comportamento)</p>
+      <span class="astro-item-price">R$ 80</span>
+    </div>
+
+    <div class="astro-table-row">
+      <p class="astro-item-title">Análise das Casas (Carreira, Dinheiro e Relacionamentos)</p>
+      <span class="astro-item-price">R$ 90</span>
+    </div>
+
+    <div class="astro-table-row">
+      <p class="astro-item-title">Mapeamento de Desafios e Guia Prático</p>
+      <span class="astro-item-price">R$ 70</span>
+    </div>
+
+    <div class="astro-table-row">
+      <p class="astro-item-title">Análise artesanal feita à mão em até 1 dia útil</p>
+      <span class="astro-item-price">R$ 120</span>
+    </div>
+
+    <div class="astro-table-row">
+      <p class="astro-item-title">PDF com design premium</p>
+      <span class="astro-item-price">R$ 47</span>
+    </div>
+
+ <div class="astro-table-row astro-row-total">
+  <span class="astro-total-title">Valor Total</span>
+  <div class="astro-price-anchor-wrapper">
+    <span class="astro-price-before">De: R$ 497</span>
+    <span class="astro-price-after">Por 11x <br>de R$ 8,55</span>
+  </div>
+</div>
+
+<style>
+  /* Container em coluna para ficar um embaixo do outro */
+  .astro-price-anchor-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha ambos à direita */
+    gap: 4px;
+  }
+
+  /* Estilo para o preço original riscado */
+  .astro-price-before {
+    color: var(--text-gray);
+    font-size: 14px; /* Ajustado para dar destaque ao valor final */
+    text-decoration: line-through;
+    opacity: 0.6;
+    white-space: nowrap;
+  }
+
+  /* Estilo para o novo preço promocional */
+  .astro-price-after {
+    color: var(--accent-gold);
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+</style>
+</div></section>
